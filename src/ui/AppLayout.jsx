@@ -17,10 +17,10 @@ const Main = styled.main`
   overflow: auto;
   scroll-behavior: smooth;
 
-  /* :-webkit-scrollbar {
+  &::-webkit-scrollbar {
     display: none;
     scroll-behavior: smooth;
-  } */
+  }
 `;
 
 const Container = styled.div`
