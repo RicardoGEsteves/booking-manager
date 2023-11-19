@@ -117,7 +117,7 @@ function BookingDataBox({ booking }) {
     isPaid,
     guests: { fullName: guestName, email, country, countryFlag, nationalID },
     cabins: { name: cabinName },
-  } = booking;
+  } = booking || {};
 
   return (
     <StyledBookingDataBox>
