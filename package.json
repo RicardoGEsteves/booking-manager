@@ -19,7 +19,7 @@
     "react-hook-form": "^7.48.2",
     "react-hot-toast": "^2.4.1",
     "react-icons": "^4.11.0",
-    "react-router-dom": "^6.18.0",
+    "react-router-dom": "^6.19.0",
     "styled-components": "^6.1.1"
   },
   "devDependencies": {
