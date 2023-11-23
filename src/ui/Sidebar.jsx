@@ -20,7 +20,6 @@ function Sidebar() {
       <Logo />
       <MainNav />
 
-      {/* <Uploader /> */}
       {/* Populate DB ---> <Uploader /> */}
     </StyledSidebar>
   );
