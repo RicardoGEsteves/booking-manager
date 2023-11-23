@@ -6,8 +6,8 @@ function CheckoutButton({ bookingId }) {
 
   return (
     <Button
-      variation="primary"
-      size="small"
+      $variation="primary"
+      $size="small"
       onClick={() => checkout(bookingId)}
       disabled={isCheckingOut}
     >
