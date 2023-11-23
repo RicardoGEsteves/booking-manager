@@ -28,7 +28,7 @@ function TodayList() {
   if (isLoading) return <Spinner />;
 
   //activities?.length === 0
-  if (!activities?.length) return <NoActivity>No activity today...</NoActivity>;
+  if (!activities.length) return <NoActivity>No activity today...</NoActivity>;
 
   return (
     <StyledTodayList>
