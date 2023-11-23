@@ -47,7 +47,6 @@ export async function logout() {
 
 export async function updateCurrentUser({ password, fullName, avatar }) {
   // Update password or fullName
-
   let updateData;
   if (password) updateData = { password };
   if (fullName) updateData = { data: { fullName } };

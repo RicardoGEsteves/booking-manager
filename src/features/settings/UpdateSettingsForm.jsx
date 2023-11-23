@@ -18,7 +18,6 @@ function UpdateSettingsForm() {
   } = useSettings();
   const { isUpdating, updateSetting } = useUpdateSetting();
 
-  // return <Spinner />;
   if (isLoading) return <Spinner />;
 
   function handleBlur(e, field) {

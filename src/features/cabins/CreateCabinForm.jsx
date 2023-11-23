@@ -139,7 +139,6 @@ function CreateCabinForm({ cabinToUpdate = {}, onCloseModal }) {
       </FormRow>
 
       <FormRow>
-        {/* type is an HTML attribute! */}
         <Button
           $variation="secondary"
           type="reset"

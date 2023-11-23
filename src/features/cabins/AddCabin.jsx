@@ -17,29 +17,4 @@ function AddCabin() {
   );
 }
 
-//       <Modal.Open opens="table">
-//         <Button>Show table</Button>
-//       </Modal.Open>
-//       <Modal.Window name="table">
-//         <CabinTable />
-//       </Modal.Window>
-
-// function AddCabin() {
-//   const [isOpenModal, setIsOpenModal] = useState(false);
-//   return (
-//     <div>
-//       <Button onClick={() => setIsOpenModal((open) => !open)}>
-//         Add new cabin
-//       </Button>
-//       {isOpenModal && (
-//         <Modal onClose={() => setIsOpenModal((open) => !open)}>
-//           <CreateCabinForm
-//             onCloseModal={() => setIsOpenModal((open) => !open)}
-//           />
-//         </Modal>
-//       )}
-//     </div>
-//   );
-// }
-
 export default AddCabin;

@@ -151,7 +151,7 @@ const GlobalStyles = styled.createGlobalStyle`
     outline-offset: -1px;
   }
 
-  /* Parent selector, finally 😃 */
+  /* Parent selector */
   button:has(svg) {
     line-height: 0;
   }

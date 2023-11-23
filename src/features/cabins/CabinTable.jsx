@@ -45,12 +45,7 @@ function CabinTable() {
           <div></div>
         </Table.Header>
 
-        <Table.Body
-          // data={cabins}
-          // data={filteredCabins}
-          data={sortedCabins}
-          render={render}
-        />
+        <Table.Body data={sortedCabins} render={render} />
       </Table>
     </Menus>
   );
