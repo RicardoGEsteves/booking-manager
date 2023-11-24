@@ -9,4 +9,4 @@ setup supabase database postgres, storage and Authentication, don't forget to ad
 
 If you deploy it to netlify don't forget to check if the netlify.toml file was added on your assets on dist folder, if not create one.
 
-### you can check this app live at: https://bookings-manager.netlify.app
+### you can check this app live at: https://booking-manager.netlify.app or at: https://booking-manager-alpha.vercel.app
