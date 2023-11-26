@@ -12,7 +12,7 @@
   "dependencies": {
     "@supabase/supabase-js": "^2.38.4",
     "@tanstack/react-query": "^5.8.4",
-    "@tanstack/react-query-devtools": "^5.8.3",
+    "@tanstack/react-query-devtools": "^5.8.7",
     "date-fns": "^2.30.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
