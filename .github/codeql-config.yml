@@ -1,52 +1,57 @@
-# .github/codeql-config.yml
+name: Node.js Security Scan Configuration
+description: Scans Node.js projects for potential security issues using CodeQL
+language: javascript
+version: 1.0.2
 
-# Language configuration
+connection:
+  database:
+    type: hosted
+    # url: https://codeql.codecov.io/
+    # token: <your_codecov_token>
+
+queries:
+  - name: Unused Variables
+    query: |
+      from sources
+      where sources.code.contains("unused")
+      select sources.code.location, sources.code, "Unused variable detected"
+
+  - name: Insecure Dependency Usage
+    query: |
+      from dependencies
+      where dependencies.version < "16.13.1"
+      and dependencies.product = "npm:react-dom"
+      select dependencies.name, dependencies.version, "Insecure react-dom version used"
+
+  - name: NoESLint
+    query: |
+      from sources
+      where not sources.code.contains("eslint")
+      select sources.code.location, sources.code, "Missing ESLint"
+
+  - name: XSS Vulnerabilities
+    query: |
+      from sources
+      where sources.code.matches("(dangerousXSSMethod|unsafePattern)")
+      select sources.code.location, sources.code, "Potential XSS vulnerability"
+
+  - name: Injection Vulnerabilities
+    query: |
+      from sources
+      where sources.code.matches("(dangerousSQLQuery|unvalidatedInput)")
+      select sources.code.location, sources.code, "Possible injection vulnerability"
+
+  - name: Improper Error Handling
+    query: |
+      from controlflow
+      where controlflow.reachesExit() and not controlflow.traversesCatch()
+      select controlflow, "Improper error handling"
+
 languages:
   - javascript
-  - typescript
 
-# Analysis configuration
-queries:
-  - ./
-
-# Specify Node.js environment (assuming Node.js is used)
 environments:
   - name: Node.js
     variables:
       - name: NODE_PATH
-        value: /the-wild-oasis/node_modules
-
-# Specific rules or configurations for Node.js/npm projects
-nodejs:
-  package-json: |
-    {
-      "name": "the-wild-oasis",
-      "private": true,
-      "version": "0.0.0",
-      "type": "module",
-      "dependencies": {
-        "@supabase/supabase-js": "^2.38.5",
-        "@tanstack/react-query": "^5.8.4",
-        "@tanstack/react-query-devtools": "^5.8.7",
-        "date-fns": "^2.30.0",
-        "react": "^18.2.0",
-        "react-dom": "^18.2.0",
-        "react-error-boundary": "^4.0.11",
-        "react-hook-form": "^7.48.2",
-        "react-hot-toast": "^2.4.1",
-        "react-icons": "^4.12.0",
-        "react-router-dom": "^6.20.0",
-        "recharts": "^2.10.1",
-        "styled-components": "^6.1.1"
-      },
-      "devDependencies": {
-        "@types/react": "^18.2.15",
-        "@types/react-dom": "^18.2.17",
-        "@vitejs/plugin-react": "^4.2.0",
-        "eslint": "^8.54.0",
-        "eslint-plugin-react": "^7.32.2",
-        "eslint-plugin-react-hooks": "^4.6.0",
-        "eslint-plugin-react-refresh": "^0.4.3",
-        "vite": "^4.4.5"
-      }
-    }
+        value: "./node_modules"
