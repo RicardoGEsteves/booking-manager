@@ -14,13 +14,13 @@ environments:
   - name: Node.js
     variables:
       - name: NODE_PATH
-        value: /booking-manager/node_modules
+        value: /the-wild-oasis/node_modules
 
 # Specific rules or configurations for Node.js/npm projects
 nodejs:
   package-json: |
     {
-      "name": "booking-manager",
+      "name": "the-wild-oasis",
       "private": true,
       "version": "0.0.0",
       "type": "module",
