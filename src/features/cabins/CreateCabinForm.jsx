@@ -49,7 +49,7 @@ function CreateCabinForm({ cabinToUpdate = {}, onCloseModal }) {
   }
 
   function onError(errors) {
-    // console.log(errors);
+    // TODO: add toast
   }
 
   return (
@@ -57,7 +57,10 @@ function CreateCabinForm({ cabinToUpdate = {}, onCloseModal }) {
       onSubmit={handleSubmit(onSubmit, onError)}
       type={onCloseModal ? "modal" : "regular"}
     >
-      <FormRow label="Cabin name" error={errors?.name?.message}>
+      <FormRow
+        label="Cabin name"
+        error={errors?.name?.message}
+      >
         <Input
           type="text"
           id="name"
@@ -68,7 +71,10 @@ function CreateCabinForm({ cabinToUpdate = {}, onCloseModal }) {
         />
       </FormRow>
 
-      <FormRow label="Maximum capacity" error={errors?.maxCapacity?.message}>
+      <FormRow
+        label="Maximum capacity"
+        error={errors?.maxCapacity?.message}
+      >
         <Input
           type="number"
           id="maxCapacity"
@@ -83,7 +89,10 @@ function CreateCabinForm({ cabinToUpdate = {}, onCloseModal }) {
         />
       </FormRow>
 
-      <FormRow label="Regular price" error={errors?.regularPrice?.message}>
+      <FormRow
+        label="Regular price"
+        error={errors?.regularPrice?.message}
+      >
         <Input
           type="number"
           id="regularPrice"
@@ -98,7 +107,10 @@ function CreateCabinForm({ cabinToUpdate = {}, onCloseModal }) {
         />
       </FormRow>
 
-      <FormRow label="Discount" error={errors?.discount?.message}>
+      <FormRow
+        label="Discount"
+        error={errors?.discount?.message}
+      >
         <Input
           type="number"
           id="discount"
