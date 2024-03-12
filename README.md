@@ -1,5 +1,7 @@
 # Bookings Manager
 
+> **(UPDATE)** - with the latest dependencies updates, you will have to do some small config changes.
+
 Bookings Manager is a comprehensive React application designed for internal booking management, featuring an intuitive dashboard and a plethora of functionalities. It's optimized using composition, context, and the compound components pattern to deliver an efficient and scalable solution.
 
 ## Overview
