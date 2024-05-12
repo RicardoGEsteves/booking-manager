@@ -11,18 +11,18 @@
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.43.1",
-    "@tanstack/react-query": "^5.34.2",
-    "@tanstack/react-query-devtools": "^5.34.2",
+    "@tanstack/react-query": "^5.36.0",
+    "@tanstack/react-query-devtools": "^5.36.0",
     "date-fns": "^3.3.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-error-boundary": "^4.0.13",
     "react-hook-form": "^7.51.4",
     "react-hot-toast": "^2.4.1",
-    "react-icons": "^5.2.0",
-    "react-router-dom": "^6.23.0",
-    "recharts": "^2.12.6",
-    "styled-components": "^6.1.9"
+    "react-icons": "^5.2.1",
+    "react-router-dom": "^6.23.1",
+    "recharts": "^2.12.7",
+    "styled-components": "^6.1.11"
   },
   "devDependencies": {
     "@types/react": "18.3.2",
