@@ -11,8 +11,8 @@
   },
   "dependencies": {
     "@supabase/supabase-js": "2.44.3",
-    "@tanstack/react-query": "5.50.1",
-    "@tanstack/react-query-devtools": "5.50.1",
+    "@tanstack/react-query": "5.51.1",
+    "@tanstack/react-query-devtools": "5.51.1",
     "date-fns": "3.6.0",
     "react": "18.3.1",
     "react-dom": "18.3.1",
@@ -29,9 +29,9 @@
     "@types/react-dom": "18.3.0",
     "@vitejs/plugin-react": "4.3.1",
     "eslint": "8.57.0",
-    "eslint-plugin-react": "7.34.3",
+    "eslint-plugin-react": "7.34.4",
     "eslint-plugin-react-hooks": "4.6.2",
-    "eslint-plugin-react-refresh": "0.4.7",
+    "eslint-plugin-react-refresh": "0.4.8",
     "vite": "5.3.3"
   }
 }
